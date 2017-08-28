@@ -37,11 +37,11 @@
 body{
 	margin: 0px;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font-style: normal;
+	background-color: #3F3F3F;
 }
 
 .ticker-wrapper.has-js {
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 10px;
 	padding: 0px 0px;
 	width: 1584px;
 	height: 92px;
@@ -70,7 +70,7 @@ body{
 	padding-top: 9px;
 	position: absolute;
 	color: #FFF;
-	font-weight: bold;
+	font-weight: normal;
 	background-color: #3F3F3F;
 	overflow: hidden;
 	white-space: nowrap;
