@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+  <title>Squarespace - Website Expired</title>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <script crossorigin="anonymous" src="//static.squarespace.com/universal/scripts-compressed/common-347ad30944c95e7b659a-min.en-US.js" ></script><link rel="stylesheet" type="text/css" href="//static.squarespace.com/universal/styles-compressed/common-6913b6473ac7ba2469d79d7b3ca246a1-min.css"/>
+  <script crossorigin="anonymous" src="//static.squarespace.com/universal/scripts-compressed/dialog-4d4b582eec8f9e1a5804-min.en-US.js" ></script><link rel="stylesheet" type="text/css" href="//static.squarespace.com/universal/styles-compressed/dialog-9489ad8eb7daab1644e1eb45a671ba44-min.css"/>
+  <script crossorigin="anonymous" src="//static.squarespace.com/universal/scripts-compressed/system-page-286c927da93982b8da03-min.en-US.js" ></script><link rel="stylesheet" type="text/css" href="//static.squarespace.com/universal/styles-compressed/system-page-5abe0be5c144df85b3d83daa764acaaa-min.css"/>
+
+  <script>
+
+    YUI(YUI_CONFIG).use('squarespace-common', 'squarespace-system-page', function(Y) {
+	
+      Y.on("domready", function() {
+      
+        var lb = new Y.Squarespace.Lightbox({
+          disableNormalClose: true,
+          clickAnywhereToExit: false,
+          content: '<div class="bigtext"><div class="title">Website Expired</div><div class="description">This account has expired.  If you are the site owner, click below to login.</div><div class="buttons"><input type="button" class="login-button" name="login" value="Owner Login"/></div></div>',
+          margin: 100,
+          noHeightConstrain: true
+        });
+
+        lb.show();
+
+        lb.getContentEl().on("click", function(e) {
+          if (e.target.ancestor(".login-button", true)) {
+            document.location.href = '/config/';
+          }
+        });
+        
+      });
+          
+    }); 
+
+  </script> 
+
+
+</head>
+<body class="squarespace-config squarespace-system-page">
+
+  <div class="minimal-logo">&nbsp;</div>
+
+</body>
+</html>
