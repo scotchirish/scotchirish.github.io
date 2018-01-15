@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <!-- Script to pull in hidden data -->
+    <script type="text/javascript">
+    window.onload=function(){
+    function querySt(ji) {
+
+      hu = window.location.search.substring(1);
+      gy = hu.split("&");
+
+      for (i=0;i<gy.length;i++) {
+        ft = gy[i].split("=");
+        if (ft[0] == ji) {
+          return ft[1];
+        }
+      }
+    }
+
+    /*
+    var uc = querySt("uc");
+
+    if( uc==null){
+    }else{
+    document.getElementById('uniquecode').value = uc;
+    }
+    */
+
+
+    var specialty = querySt("specialty");
+    if( specialty!=null ){
+      document.getElementById('network').value = specialty;
+      document.getElementById('hidden-specialty').innerHTML = "specialty = " + specialty;
+      console.log("specialty = " + specialty);
+    }
+
+    var network = querySt("network");
+    if( network!=null ){
+      document.getElementById('network').value = network;
+      document.getElementById('hidden-network').innerHTML = "network = " + network;
+      console.log("network = " + network);
+    }
+
+
+  }
+
+
+
+    </script>
+  </head>
+
+
+  <body>
+    <div style="margin:32px;">
+
+    <h1>Send Feedback</h1>
+    <p style="color:#999;">Describe your issue or share your ideas!
+      <br />Your feedback will be sent to Outcome Health, and will be used to help improve this product.
+    </p>
+
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSebzwq2m_6wQ3FXCQ7OuOhvP3gI3DHkoIPMkWox_CEbs2i_Tg/formResponse" target="_self" method="POST">
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Question 1: <b>What do you think of this tablet?</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Your answer" name="entry.581914834"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea2">Question 2: <b>What do you think of the advertised content on this tablet?</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea2" rows="2" placeholder="Your answer" name="entry.658294468"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlTextarea3">Question 3: <b>How could we improve this tablet?</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea3" rows="2" placeholder="Your answer" name="entry.1171613594"></textarea>
+      </div>
+
+      <!-- hidden content -->
+
+      <!-- optional - specialty -->
+      <input type="hidden" id="specialty" name="entry.1086807615" />
+      <!-- optional - network -->
+      <input type="hidden" id="network" name="entry.1244432125" />
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+      <hr />
+
+      <br />&nbsp;
+
+      <!-- TESTING ONLY -->
+      <!--
+      <div class="form-group">
+        <label for="uniquecode">For testing purposes only...</label>
+        <input class="form-control" type="text" name="uniquecode" id="uniquecode" style="width: 350px;" class="input" value="" placeholder="Testing..." />
+      </div>
+    -->
+
+    <p>For testing purposes only...</p>
+
+      <ul>
+        <li><span id="hidden-specialty" /></li>
+        <li><span id="hidden-network" /></li>
+      </ul>
+
+
+
+      <hr />
+      <p><b>Reference</b></p>
+      <ul>
+        <li><a href="issue-collector.html">JIRA Issue Collector Demo</a></li>
+        <li><a href="https://space10-community.github.io/conversational-form/">Conversational Form example</a></li>
+        <li><a href="window-size.html">Window Size</a></li>
+      </ul>
+
+
+
+
+    </form>
+
+
+
+  </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </body>
+</html>
